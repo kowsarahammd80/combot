@@ -1,0 +1,9 @@
+.qrIcon{
+    font-size: 180px;
+}
+
+@media (max-width: 600px){
+    .qrIcon{
+        font-size: 150px;
+    }
+}

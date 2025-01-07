@@ -1,0 +1,98 @@
+[
+    {
+        "planName": "Free",
+        "icon": "<i class='fa-regular fa-star'></i>",
+        "business": "Perfect for small businesses just getting started",
+        "prices": {
+          "USD": {
+            "currencySymbol": "$",
+            "currencyCode": "USD",
+            "amount": 0,
+            "billingPeriod": "month"
+          },
+          "BDT": {
+            "currencySymbol": "৳",
+            "currencyCode": "BDT",
+            "amount": 0,
+            "billingPeriod": "month"
+          }
+        },
+
+        "bgColor": "#f7fbfe",
+    "iconColor": "#1d4ed8",
+        
+        "features": [
+          "Up to 10 reviews per month",
+          "No Com.Bot Branding",
+          "Premium QR customization",
+          "Advanced analytics & reporting",
+          "API & Webhook access",
+          "5 QR Stickers"
+        ]
+      },
+      {
+        "planName": "Platinum",
+        "icon": "<i class='fa-solid fa-crown'></i>",
+        "business": "Perfect for small businesses just getting started",
+        "prices": {
+          "USD": {
+            "currencySymbol": "$",
+            "currencyCode": "USD",
+            "amount": 100,
+            "billingPeriod": "year"
+          },
+          "BDT": {
+            "currencySymbol": "৳",
+            "currencyCode": "BDT",
+            "amount": 8200,
+            "billingPeriod": "year"
+          }
+        },
+        "bgColor": "#eae7f9",
+    "iconColor": "#1d4ed8",
+        
+        "features": [
+         "Up to 10000 reviews per month",
+          "No Com.Bot Branding",
+          "Premium QR customization",
+          "Advanced analytics & reporting",
+          "API & Webhook access",
+          "Dedicated account manager",
+          "Custom Reward System",
+          "5 QR Stickers"
+        ]
+      },
+    {
+        "planName": "Gold",
+        "icon": "<i class='fa-solid fa-bolt'></i>",
+        "business": "Perfect for small businesses just getting started",
+        "prices": {
+          "USD": {
+            "currencySymbol": "$",
+            "currencyCode": "USD",
+            "amount": 28,
+            "billingPeriod": "year"
+          },
+          "BDT": {
+            "currencySymbol": "৳",
+            "currencyCode": "BDT",
+            "amount": 500,
+            "billingPeriod": "year"
+          }
+        },
+        "bgColor": "#fdf7ee",
+    "iconColor": "#fdec04",
+        
+        "features": [
+          "Up to 100 reviews per month",
+          "No Com.Bot Branding",
+          "Premium QR customization",
+          "Advanced analytics & reporting",
+          "API & Webhook access",
+          "Dedicated account manager",
+          "Custom Reward System",
+          "5 QR Stickers"
+        ]
+      }
+   
+]
