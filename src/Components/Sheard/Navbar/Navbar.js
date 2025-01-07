@@ -41,7 +41,8 @@ const NavBar = () => {
             <i class="fa-regular fa-comment me-1 text-sm"></i>
             Contact
           </Link>
-
+          
+          {/* crose button */}
           <button className="nav-btn nav-close-btn">
             <i class="fa-regular fa-circle-xmark mt-10"></i>
           </button>
