@@ -52,7 +52,7 @@ const Price = () => {
             return (
               <div
                 key={index}
-                className={`card w-full shadow hover:shadow-2xl h-full ${packeg.planName === "Platinum" ? "border-2 border-yellow-500 -mt-0 lg:-mt-5 xl:-mt-5" : ""}`}
+                className={`card w-full shadow hover:shadow-2xl h-full ${packeg.planName === "Platinum" ? "border-2 border-yellow-500" : ""}`}
                 style={{ backgroundColor: packeg.bgColor }} // Set background color dynamically
               >
                 {packeg.planName === "Platinum" && (
