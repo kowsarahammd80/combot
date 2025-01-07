@@ -14,7 +14,7 @@ const NavBar = () => {
     <div className="fixed z-50 w-full shadow-sm bg-white text-black">
       <header className="mx-0 xl:mx-32 lg:mx-32">
         {/*nav logo */}
-        <Link to="homeHero" className=" cursor-pointer font-semibold" smooth={true} offset={-120} duration={500}>
+        <Link to="homeHero" className="cursor-pointer font-semibold" smooth={true} offset={-120} duration={500}>
           <div className="navLogoDiv">
             <img
               className="navLog"
@@ -29,15 +29,15 @@ const NavBar = () => {
           onClick={showNavbar}
           className="nav-link mt-0 lg:mt-2 xl:mt-2"
         >
-          <Link className="navLink-hover" to="features" smooth={true} offset={-120} duration={500}>
+          <Link onClick={showNavbar} className="navLink-hover" to="features" smooth={true} offset={-120} duration={500}>
             <i class="fa-solid fa-layer-group me-1 text-sm" ></i>
             Features
           </Link>
-          <Link className="navLink-hover" to="pricing" smooth={true} offset={-120} duration={500}>
+          <Link onClick={showNavbar} className="navLink-hover" to="pricing" smooth={true} offset={-120} duration={500}>
             <i class="fa-solid fa-wallet me-1 text-sm"></i>
             Pricing
           </Link>
-          <Link className="navLink-hover" to="contact" smooth={true} offset={-120} duration={500}>
+          <Link onClick={showNavbar} className="navLink-hover" to="contact" smooth={true} offset={-120} duration={500}>
             <i class="fa-regular fa-comment me-1 text-sm"></i>
             Contact
           </Link>

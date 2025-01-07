@@ -45,7 +45,6 @@ header .nav-btn {
   display: flex;
   justify-content: center;
   width: 100%;
-  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) */
 }
 header div,
 nav {
@@ -129,9 +128,9 @@ nav {
 		color: rgb(54, 53, 53);
 	}
   .nav-link{
-	background-color: rgb(164, 233, 164);
+	background-color: #f48888;
 	font-size: 10px;
-	color: rgb(17, 17, 17);
+	color: white;
 	font-weight: 400;
 	text-align: start;
 	margin-left: 0px;
@@ -144,7 +143,7 @@ nav {
 		font-size: 1rem;
 	}
 	.navLogoDiv{
-		width: 55%;
+		width: 75%;
 		height: 4vh;
 	}
 	.navLog{
@@ -187,7 +186,7 @@ nav {
 		color: black;
 	}
   .nav-link{
-	background-color: rgb(148, 225, 148);
+	background-color: #f78282;
 	font-size: 10px;
 	font-weight: 400;
 	text-align: start;

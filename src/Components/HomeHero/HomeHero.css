@@ -100,17 +100,15 @@
         border-radius: 15px;
         color: black;
         font-size: 16px;
-        /* margin-top: -3px; */
-        /* border: 0.5px solid black; */
     }
     
     .homeSeeButton{
         background-color: white;
         padding: 8px 15px;
         border-radius: 15px;
-        color: black;
+        color: #EF4444;
         font-size: 16px;
-        border: 0.1px solid rgb(135, 237, 149);
+        border: 2px solid black;
         transition: 0.3s ease-in-out;
     }
     
@@ -119,7 +117,7 @@
         padding: 8px 15px;
         border-radius: 15px;
         color: black;
-        border: 0.1px solid rgb(3, 54, 9);
+        border: 2px solid #EF4444;
         font-size: 16px;
     }
 }
