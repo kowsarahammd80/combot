@@ -11,7 +11,7 @@ const Price = () => {
   };
 
   return (
-    <div className="mx-5 lg:mx-36 xl:mx-36 my-10" id="pricing">
+    <div className="mx-5 lg:mx-36 xl:mx-36 mt-5 mb-5" id="pricing">
       {/* Headline */}
       <div className="text-center" >
         <h1 className="text-2xl lg:text-5xl font-semibold text-center mb-2">
@@ -22,7 +22,7 @@ const Price = () => {
         </p>
         {/* Button */}
         <div className="flex justify-center mt-5 mb-3">
-          <div className="w-1/3 lg:w-1/12 xl:w-1/12 md:w-1/6 border flex justify-between rounded-lg">
+          <div className="border rounded-lg">
           <button
               onClick={() => handleCurrencyChange("BDT")}
               className={`p-2 rounded-lg ${
@@ -52,7 +52,7 @@ const Price = () => {
             return (
               <div
                 key={index}
-                className={`card w-full shadow hover:shadow-2xl h-full ${packeg.planName === "Platinum" ? "border-2 border-yellow-500" : ""}`}
+                className={`card w-full shadow hover:shadow-2xl h-full cursor-pointer ${packeg.planName === "Platinum" ? "border-2 border-yellow-500" : ""}`}
                 style={{ backgroundColor: packeg.bgColor }} // Set background color dynamically
               >
                 {packeg.planName === "Platinum" && (

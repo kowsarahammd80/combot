@@ -1,9 +1,9 @@
 import React from "react";
-import './Service.css'
+import "./Service.css";
 
 const Service = () => {
   return (
-    <div className="bg-base-200 my-5 lg:my-10 xl:my-10" >
+    <div className="bg-base-200 my-5 lg:my-10 xl:my-10">
       <div className="mx-5 lg:mx-36 xl:mx-36 py-10" id="features">
         {/* headline */}
         <div className="text-center">
@@ -16,7 +16,7 @@ const Service = () => {
           </p>
         </div>
         {/* service card */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-3 my-5 lg:my-10 xl:my-10 gap-5 lg:gap-8 xl:gap-8" >
+        <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-2 my-5 lg:my-10 xl:my-10 gap-5 lg:gap-8 xl:gap-8">
           {/* card main div */}
           <div className="bg-purple-100 rounded shadow hover:shadow-xl">
             <div className="p-5">
@@ -96,7 +96,7 @@ const Service = () => {
               {/* text div */}
               <div className="my-3">
                 <p className="text-xl font-semibold text-center">
-                  Reward System
+                  Review Management
                 </p>
                 <p className="text-lg text-center text-gray-500">
                   Automatically distribute discount codes to customers who leave
@@ -197,7 +197,9 @@ const Service = () => {
           {/* card main div end */}
         </div>
         <div className="flex justify-center ">
-          <button className="px-16 py-2 rounded-xl shadow-md hover:shadow-xl bg-gradient-to-b bg-white border border-red-400 text-lg font-semibold text-red-400">Get Your Reviews Up</button>
+          <button className="px-16 py-2 rounded-xl text-lg font-semibold text-red-400 serviceGetReviewButton">
+            Get Your Reviews Up
+          </button>
         </div>
       </div>
       {/* button */}

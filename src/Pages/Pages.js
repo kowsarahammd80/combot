@@ -4,6 +4,7 @@ import BusinessQr from '../Components/BusinessQr/BusinessQr';
 import Service from '../Components/Service/Service';
 import Contact from '../Components/Contact/Contact';
 import Price from '../Components/Price/Price';
+import SuitsBusiness from '../Components/SuitsBusiness/SuitsBusiness';
 
 const Pages = () => {
     return (
@@ -11,6 +12,7 @@ const Pages = () => {
             <HomeHero/>
             <Service/>
             <BusinessQr/>
+            <SuitsBusiness/>
             <Price/>
             <Contact/>
         </div>

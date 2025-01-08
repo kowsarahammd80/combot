@@ -1,0 +1,87 @@
+[
+    
+        {
+          "id": 1,
+          "headline": "Restaurants & Cafés",
+          "description": "Reviews highlight food quality, ambiance, and customer service. Helps customers decide where to eat or hang out. High ratings increase foot traffic.",
+          "icon": "<i class='fa-solid fa-utensils'></i>",
+          "iconColor": "#8B0000",
+          "cardBG": "#FFE5E5"
+        },
+        {
+            "id": 2,
+            "headline": "Educational Institutions",
+            "description": "Coaching centers, schools, and universities gain credibility through reviews. Parents and students use them to evaluate options.",
+            "icon": "<i class='fa-solid fa-graduation-cap'></i>",
+            "iconColor": "#4B0082",
+            "cardBG": "#EDE4FF"
+          },
+        
+        {
+          "id": 3,
+          "headline": "Hotels & Resorts",
+          "description": "Reviews are critical for booking decisions, especially from travelers. High ratings attract both local and international tourists.",
+          "icon": "<i class='fa-solid fa-hotel'></i>",
+          "iconColor": "#FBBF24",
+          "cardBG": "#FEFCE8"
+        },
+        {
+          "id": 4,
+          "headline": "Medical Services",
+          "description": "Hospitals, clinics, diagnostic centers, and pharmacies benefit from reviews. Feedback often mentions service quality, waiting times, and staff behavior.",
+          "icon": "<i class='fa-regular fa-hospital'></i>",
+          "iconColor": "#4169E1",
+          "cardBG": "#E6F2FF"
+        },
+        {
+            "id": 5,
+            "headline": "Beauty & Wellness",
+            "description": "Salons, spas, and gyms use reviews to attract customers. Feedback often includes comments about hygiene and service quality.",
+            "icon": "<i class='fa-solid fa-spa'></i>",
+            "iconColor": "#B03060",
+            "cardBG": "#FFD6E8"
+          },
+        
+        {
+          "id": 6,
+          "headline": "Travel & Tourism Agencies",
+          "description": "Reviews help tourists choose agencies for trips and tours. Positive experiences attract more clients.",
+          "icon": "<i class='fa-solid fa-person-walking-luggage'></i>",
+          "iconColor": "#8B4513",
+          "cardBG": "#FFF5E5"
+        },
+        {
+          "id": 7,
+          "headline": "IT & Repair Services",
+          "description": "Laptop, mobile, and home appliance repair services thrive on positive feedback. Clients prefer businesses with reliable and trusted reviews.",
+          "icon": "<i class='fa-solid fa-screwdriver-wrench'></i>",
+          "iconColor": "#2F4F4F",
+          "cardBG": "#E0F2F1"
+        },
+        {
+          "id": 8,
+          "headline": "Real Estate & Property Management",
+          "description": "Real estate agencies and developers gain trust via reviews for their properties and services.",
+          "icon": "<i class='fa-solid fa-city'></i>",
+          "iconColor": "#2B2B2B",
+          "cardBG": "#F0F8FF"
+        },
+        {
+            "id": 9,
+            "headline": "Retail Stores",
+            "description": "Clothing stores, supermarkets, and electronic shops rely on reviews for trust-building. Positive reviews showcase product quality and customer service.",
+            "icon": "<i class='fa-solid fa-store'></i>",
+            "iconColor": "#006400",
+            "cardBG": "#BBF7D0"
+          },
+        {
+          "id": 10,
+          "headline": "Logistics & Delivery Services",
+          "description": "Reviews build trust in companies offering courier and delivery services. Timely delivery and good customer support are key factors.",
+          "icon": "<i class='fa-solid fa-truck-plane'></i>",
+          "iconColor": "#000080",
+          "cardBG": "#E6E6FA"
+        }
+      
+      
+]

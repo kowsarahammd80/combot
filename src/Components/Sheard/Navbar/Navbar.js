@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <div className="fixed z-50 w-full shadow-sm bg-white text-black">
-      <header className="mx-0 xl:mx-32 lg:mx-32">
+      <header className="mx-0 xl:mx-32 lg:mx-32 md:mx-10">
         {/*nav logo */}
         <Link
           to="homeHero"
@@ -68,16 +68,30 @@ const NavBar = () => {
             <i class="fa-regular fa-comment me-1 text-sm"></i>
             Contact
           </Link>
+          <Link
+            onClick={showNavbar}
+            className="navLink-hover"
+            to="suits"
+            smooth={true}
+            offset={-120}
+            duration={500}
+          >
+            <i class="fa-solid fa-briefcase me-1 text-sm"></i>
+            Suits
+          </Link>
+          <button className="mt-1 px-2 lg:px-2 xl:px-2 py-0 lg:py-1 xl:py-1 rounded-lg getSatartBtn shadow-md">
+             <span className="text-sm">Get Start</span>
+          </button>
           {/* cross button */}
           <button className="nav-btn nav-close-btn">
             <i class="fa-regular fa-circle-xmark mt-10"></i>
           </button>
         </nav>
-        <div className="felx justify-end w-4/5 lg:w-1/5 xl:w-1/5 md:2/5 ms-10 lg:ms-2 xl:ms-2 md:ms-10">
-          <button className="mt-1 px-2 lg:px-5 xl:px-5 py-0 lg:py-2 xl:py-2 rounded-lg getSatartBtn shadow-md">
-            <i class="fa-solid fa-angle-right me-1 text-sm"></i> Get Start
+        {/* <div className="felx justify-end w-full lg:w-2/12">
+          <button className=" px-2 lg:px-2 xl:px-2 py-0 lg:py-1 xl:py-1 rounded-lg getSatartBtn shadow-md">
+             <span className="text-sm">Get Start</span>
           </button>
-        </div>
+        </div> */}
         {/* togol button*/}
         <button className="nav-btn" onClick={showNavbar}>
           <i class="fa-solid fa-bars text-lg lg:text-lg xl:text-lg "></i>
