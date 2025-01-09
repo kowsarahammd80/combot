@@ -91,7 +91,7 @@ const Contact = () => {
                     <div className="shadow-lg bg-base-200 w-full rounded px-4 py-3 flex items-center my-2 lg:my-5 xl:my-5">
                       <div className="">
                         <p>
-                          <i class="fa-regular fa-envelope text-3xl me-4"></i>
+                          <i class="fa-regular fa-comment text-3xl me-4"></i>
                         </p>
                       </div>
                       <div className="">
