@@ -59,17 +59,6 @@ const NavBar = () => {
           <Link
             onClick={showNavbar}
             className="navLink-hover"
-            to="contact"
-            smooth={true}
-            offset={-120}
-            duration={500}
-          >
-            <i class="fa-regular fa-comment me-1 text-sm"></i>
-            Contact
-          </Link>
-          <Link
-            onClick={showNavbar}
-            className="navLink-hover"
             to="suits"
             smooth={true}
             offset={-120}
@@ -78,8 +67,19 @@ const NavBar = () => {
             <i class="fa-solid fa-briefcase me-1 text-sm"></i>
             Suits
           </Link>
+          <Link
+            onClick={showNavbar}
+            className="navLink-hover"
+            to="contact"
+            smooth={true}
+            offset={-120}
+            duration={500}
+          >
+            <i class="fa-regular fa-comment me-1 text-sm"></i>
+            Contact
+          </Link>
           <button className="mt-1 px-2 lg:px-2 xl:px-2 py-0 lg:py-1 xl:py-1 rounded-lg getSatartBtn shadow-md">
-             <span className="text-sm">Get Start</span>
+            <span className="text-sm">Get Start</span>
           </button>
           {/* cross button */}
           <button className="nav-btn nav-close-btn">
