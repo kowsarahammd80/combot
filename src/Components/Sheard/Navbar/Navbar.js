@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-// import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Link } from "react-scroll";
 
@@ -87,11 +86,6 @@ const NavBar = () => {
             <i class="fa-regular fa-circle-xmark mt-10"></i>
           </button>
         </nav>
-        {/* <div className="felx justify-end w-full lg:w-2/12">
-          <button className=" px-2 lg:px-2 xl:px-2 py-0 lg:py-1 xl:py-1 rounded-lg getSatartBtn shadow-md">
-             <span className="text-sm">Get Start</span>
-          </button>
-        </div> */}
         {/* togol button*/}
         <button className="nav-btn" onClick={showNavbar}>
           <i class="fa-solid fa-bars text-lg lg:text-lg xl:text-lg "></i>

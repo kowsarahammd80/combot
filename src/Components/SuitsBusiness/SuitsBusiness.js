@@ -30,8 +30,8 @@ const SuitsBusiness = () => {
                 <div className="flex items-center justify-center">
                   <span
                     dangerouslySetInnerHTML={{ __html: business.icon }}
-                    className="mr-2 text-4xl"
-                    style={{ color: business.iconColor }} // Set icon color dynamically
+                    className="text-4xl"
+                    style={{ color: business.iconColor }}
                   ></span>
                 </div>
                 {/* text div */}
@@ -40,6 +40,80 @@ const SuitsBusiness = () => {
                     {business.headline}
                   </p>
                 </div>
+                <div className="text-center text-sm text-white ">
+                  {/* modal button */}
+                  {/* <button
+                    onClick={() =>
+                      document.getElementById(`${business.id}`).showModal()
+                    }
+                    className="border px-2 py-1 shadow-lg rounded-lg"
+                    style={{ backgroundColor: business.iconColor }}
+                  >
+                    See More
+                  </button> */}
+                </div>
+                {/* model */}
+                {/* <dialog
+                  id={business.id}
+                  className="modal modal-bottom sm:modal-middle"
+                >
+                  <div
+                    className="modal-box"
+                    style={{ backgroundColor: business.cardBG }}
+                  >
+                    <div className="flex items-center justify-center">
+                      <span
+                        dangerouslySetInnerHTML={{ __html: business.icon }}
+                        className="mr-2 text-4xl"
+                        style={{ color: business.iconColor }}
+                      ></span>
+                    </div>
+                    <h3 className="font-bold text-lg">{business.headline}</h3>
+                    <p className="py-4">
+                      Press ESC key or click the button below to close
+                    </p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                       
+                        <button
+                          className="btn text-white"
+                          style={{ backgroundColor: business.iconColor }}
+                        >
+                          Close
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog> */}
+                {/* <dialog id={business.id} className="modal">
+                  <div
+                    className="modal-box"
+                    style={{ backgroundColor: business.cardBG }}
+                  >
+                    <div className="flex items-center justify-center mb-4">
+                      <span
+                        dangerouslySetInnerHTML={{ __html: business.icon }}
+                        className=" text-5xl"
+                        style={{ color: business.iconColor }}
+                      ></span>
+                    </div>
+                    <h3 className="font-bold text-xl">{business.headline}</h3>
+                    <p className="py-2 lg:py-4 xl:py-4 md:py-4">
+                      {business.description}
+                    </p>
+                    <div className="modal-action flex justify-center">
+                      <form method="dialog" className="">
+                        
+                        <button
+                          className="btn text-white"
+                          style={{ background: business.iconColor }}
+                        >
+                          Close
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog> */}
               </div>
             </div>
           ))}

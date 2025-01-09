@@ -49,7 +49,7 @@ const Contact = () => {
                     ></textarea>
 
                     <div className="flex justify-center">
-                      <button className="px-2 py-2 lg:px-5 xl:px-5 bg-red-400 text-white w-full shadow-xl rounded bg-gradient-to-l from-red-200 to-transparent">
+                      <button className="px-2 py-2 lg:px-5 xl:px-5 bg-red-400 text-white w-full shadow-xl rounded bg-gradient-to-l from-red-500 to-transparent">
                         <i class="fa-regular fa-paper-plane"></i> Send Message
                       </button>
                     </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                   {/* text contact div */}
                   <div className="w-full mx-2 lg:mx-10 ">
                     {/* NUMBER */}
-                    <div className="shadow-lg bg-red-200 w-full rounded px-4 lg:px-4 xl:px-4 md:px-3 py-3 lg:py-3 xl:py-3 md:py-2 flex items-center my-2 lg:my-5 xl:my-5">
+                    <div className="shadow-lg bg-base-200 w-full rounded px-4 lg:px-4 xl:px-4 md:px-3 py-3 lg:py-3 xl:py-3 md:py-2 flex items-center my-2 lg:my-5 xl:my-5">
                       <div className="">
                         <p>
                           <i class="fa-solid fa-phone text-3xl lg:text-3xl xl:text-3xl md:text-3xl me-4"></i>
@@ -75,7 +75,7 @@ const Contact = () => {
                       </div>
                     </div>
                     {/* EMAIL */}
-                    <div className="shadow-lg bg-red-200 w-full rounded px-4 py-3 flex items-center my-2 lg:my-5 xl:my-5">
+                    <div className="shadow-lg bg-base-200 w-full rounded px-4 py-3 flex items-center my-2 lg:my-5 xl:my-5">
                       <div className="">
                         <p>
                           <i class="fa-regular fa-envelope text-3xl me-4"></i>
@@ -88,7 +88,7 @@ const Contact = () => {
                       </div>
                     </div>
                     {/* CHAT */}
-                    <div className="shadow-lg bg-red-200 w-full rounded px-4 py-3 flex items-center my-2 lg:my-5 xl:my-5">
+                    <div className="shadow-lg bg-base-200 w-full rounded px-4 py-3 flex items-center my-2 lg:my-5 xl:my-5">
                       <div className="">
                         <p>
                           <i class="fa-regular fa-envelope text-3xl me-4"></i>

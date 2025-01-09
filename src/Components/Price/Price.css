@@ -1,10 +1,10 @@
-.card {
+.priceCard {
     position: relative;
     overflow: hidden; /* Optional: Prevent content from overflowing */
   }
   
   /* Style the "Popular" badge */
-  .card .popular-badge {
+  .priceCard .popular-badge {
     position: absolute;
     top: 10px; /* Distance from the top */
     right: 10px; /* Distance from the left */
