@@ -3,7 +3,7 @@ import useBusinessSuits from "../../Hooks/useBusinessSuits";
 
 const SuitsBusiness = () => {
   const [businesss] = useBusinessSuits();
-  console.log(businesss);
+  // console.log(businesss);
   return (
     <div className="mx-5 lg:mx-36 xl:mx-36 py-10" id="suits">
       {/* headline */}

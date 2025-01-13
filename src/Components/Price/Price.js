@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import usePackeg from "../../Hooks/usePackeg";
-import './Price.css'
+import "./Price.css";
 
 const Price = () => {
   const [packegs] = usePackeg(); // Assuming this fetches the packages correctly
@@ -10,10 +10,50 @@ const Price = () => {
     setSelectedCurrency(currencyCode);
   };
 
+  const handleGetPayment = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const businessName = form.businessName.value;
+    const contactNumber = Number(form.contactNumber.value);
+    const packegPrice = Number(form.dataset.price);
+    const currencySymbol = form.dataset.currency;
+    const planName = form.dataset.planname;
+
+    const postData={
+      name: name,
+      email: email,
+      businessName: businessName,
+      contactNumber: contactNumber,
+      packegPrice: packegPrice,
+      currencySymbol: currencySymbol,
+      planName
+    }
+    
+    console.log(postData)
+
+    fetch("https://combot-server-1.onrender.com/api/paymentInfo", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          window.location.href = "https://payment.watheta.com/";
+          form.reset('')
+        }
+      });
+
+  };
+
   return (
     <div className="mx-5 lg:mx-36 xl:mx-36 mt-5 mb-5" id="pricing">
       {/* Headline */}
-      <div className="text-center" >
+      <div className="text-center">
         <h1 className="text-2xl lg:text-5xl font-semibold text-center mb-2">
           Select your strategy
         </h1>
@@ -23,7 +63,7 @@ const Price = () => {
         {/* Button */}
         <div className="flex justify-center mt-5 mb-3">
           <div className="border rounded-lg">
-          <button
+            <button
               onClick={() => handleCurrencyChange("BDT")}
               className={`p-2 rounded-lg ${
                 selectedCurrency === "BDT" ? "bg-red-500 text-white" : ""
@@ -39,7 +79,6 @@ const Price = () => {
             >
               USD
             </button>
-            
           </div>
         </div>
       </div>
@@ -52,7 +91,11 @@ const Price = () => {
             return (
               <div
                 key={index}
-                className={`priceCard w-full shadow hover:shadow-2xl cursor-pointer rounded-xl ${packeg.planName === "Platinum" ? "border-2 border-yellow-500" : ""}`}
+                className={`priceCard w-full shadow hover:shadow-2xl cursor-pointer rounded-xl ${
+                  packeg.planName === "Platinum"
+                    ? "border-2 border-yellow-500"
+                    : ""
+                }`}
                 style={{ backgroundColor: packeg.bgColor }} // Set background color dynamically
               >
                 {packeg.planName === "Platinum" && (
@@ -79,35 +122,130 @@ const Price = () => {
                     {packeg.features.map((featur, index) => (
                       <ul key={index} className="list-disc list-inside">
                         {/* <li className="my-2 lg:my-4 xl:my-4 md:my-3">{featur}</li> */}
-                        <p className="my-2 lg:my-4 xl:my-4 md:my-3"> <span className="me-1 lg:me-2 xl:me-2 text-lg"><i class="fa-solid fa-check"></i></span> {featur}</p>
+                        <p className="my-2 lg:my-4 xl:my-4 md:my-3">
+                          {" "}
+                          <span className="me-1 lg:me-2 xl:me-2 text-lg">
+                            <i class="fa-solid fa-check"></i>
+                          </span>{" "}
+                          {featur}
+                        </p>
                       </ul>
                     ))}
                   </div>
                   <div className="card-actions justify-center mt-4">
                     {packeg.planName === "Free" ? (
-                      <button className="w-full bg-gray-600 rounded-xl py-2 text-white shadow hover:shadow-2xl">
+                      <button
+                        onClick={() =>
+                          document.getElementById(`${packeg.id}`).showModal()
+                        }
+                        className="w-full bg-gray-600 rounded-xl py-2 text-white shadow hover:shadow-2xl"
+                      >
                         Get Start
                       </button>
                     ) : (
-                      <button className="w-full bg-rose-500 rounded-xl py-2 shadow hover:shadow-2xl text-white">
+                      <button
+                        onClick={() =>
+                          document.getElementById(`${packeg.id}`).showModal()
+                        }
+                        className="w-full bg-rose-500 rounded-xl py-2 shadow hover:shadow-2xl text-white"
+                      >
                         Subscribe Now
                       </button>
                     )}
                   </div>
                 </div>
+                {/* modal */}
+                <dialog id={packeg.id} className="modal">
+                  <div
+                    className="modal-box"
+                    style={{ backgroundColor: packeg.bgColor }}
+                  >
+                    <div className="text-center border-b-2">
+                      <h3 className="font-bold text-lg">
+                        You Getting Packeg : <span>{packeg.planName}</span>{" "}
+                      </h3>
+                      <p className="mb-2">
+                        Price:{" "}
+                        <span className="ms-1 font-semibold">
+                          {price.amount}
+                        </span>{" "}
+                        <span>{price.currencySymbol}</span>
+                      </p>
+                    </div>
+                    {/* form div */}
+                    <form
+                      onSubmit={handleGetPayment}
+                      className="pt-5 lg:pt-10 xl:pt-10 md:pt-6"
+                      data-price={price.amount}
+                      data-currency={price.currencySymbol}
+                      data-planname={packeg.planName}
+                    >
+                      <p className="mb-2">Full Name</p>
+                      <input
+                        name="name"
+                        required
+                        type="text"
+                        placeholder="Full Name"
+                        className="input input-bordered w-full mb-3"
+                      />
+                      <p className="mb-2">Email</p>
+                      <input
+                        name="email"
+                        required
+                        type="email"
+                        placeholder="business@gmail.com"
+                        className="input input-bordered w-full mb-3"
+                      />
+                      <p className="mb-2">Business Name</p>
+                      <input
+                        name="businessName"
+                        required
+                        type="text"
+                        placeholder="business Name"
+                        className="input input-bordered w-full mb-3"
+                      />
+                      <p className="mb-2">Business Contact Number</p>
+                      <input
+                        name="contactNumber"
+                        required
+                        type="number"
+                        placeholder="Business Number"
+                        className="input input-bordered w-full mb-3"
+                      />
+                      {/* post button */}
+                      <div className="flex justify-center items-center gap-5">
+                        <div className="modal-action w-full">
+                          {/* modal close button */}
+                          <form method="dialog" className="w-full">
+                            {/* if there is a button in form, it will close the modal */}
+                            <button className="py-2 px-4 bg-rose-500 w-full text-white rounded-xl">
+                              Cancle
+                            </button>
+                          </form>
+                        </div>
+                        <div className="pt-5 w-full">
+                          <button
+                            type="submit"
+                            className={`py-2 px-4 w-full rounded-xl shadow-xl ${
+                              packeg.planName === "Platinum" ||
+                              packeg.planName === "Free"
+                                ? "text-white"
+                                : ""
+                            } `}
+                            style={{ backgroundColor: packeg.iconColor }}
+                          >
+                            Go For Payment
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </dialog>
+                {/* modal end */}
               </div>
             );
           })}
         </div>
-      </section>
-
-      {/* test */}
-      <section>
-         <div className="bg-base-100 p-5">
-           <div>
-              
-           </div>
-         </div>
       </section>
     </div>
   );

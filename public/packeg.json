@@ -1,5 +1,6 @@
 [
-    {
+    {   
+        "id": "1",
         "planName": "Free",
         "icon": "<i class='fa-regular fa-star'></i>",
         "business": "Perfect for small businesses just getting started",
@@ -19,7 +20,7 @@
         },
 
         "bgColor": "#f7fbfe",
-    "iconColor": "#1d4ed8",
+        "iconColor": "#1d4ed8",
         
         "features": [
           "Up to 10 reviews per month",
@@ -31,7 +32,8 @@
         ]
       },
      
-    {
+    {   
+        "id": "2",
         "planName": "Gold",
         "icon": "<i class='fa-solid fa-bolt'></i>",
         "business": "Perfect for small businesses just getting started",
@@ -50,7 +52,7 @@
           }
         },
         "bgColor": "#fdf7ee",
-    "iconColor": "#fdec04",
+        "iconColor": "#fdec04",
         
         "features": [
           "Up to 100 reviews per month",
@@ -63,7 +65,8 @@
           "5 QR Stickers"
         ]
       },
-      {
+      {  
+        "id": "3",
         "planName": "Platinum",
         "icon": "<i class='fa-solid fa-crown'></i>",
         "business": "Perfect for small businesses just getting started",
@@ -82,7 +85,7 @@
           }
         },
         "bgColor": "#eae7f9",
-    "iconColor": "#1d4ed8",
+        "iconColor": "#5A4D8C",
         
         "features": [
          "Up to 10000 reviews per month",
