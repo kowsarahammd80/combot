@@ -6,13 +6,13 @@
         "business": "Perfect for small businesses just getting started",
         "prices": {
           "USD": {
-            "currencySymbol": "$",
+            "currencySymbol": "USD",
             "currencyCode": "USD",
             "amount": 0,
             "billingPeriod": "month"
           },
           "BDT": {
-            "currencySymbol": "৳",
+            "currencySymbol": "BDT",
             "currencyCode": "BDT",
             "amount": 0,
             "billingPeriod": "month"
@@ -39,13 +39,13 @@
         "business": "Perfect for small businesses just getting started",
         "prices": {
           "USD": {
-            "currencySymbol": "$",
+            "currencySymbol": "USD",
             "currencyCode": "USD",
             "amount": 28,
             "billingPeriod": "year"
           },
           "BDT": {
-            "currencySymbol": "৳",
+            "currencySymbol": "BDT",
             "currencyCode": "BDT",
             "amount": 500,
             "billingPeriod": "year"
@@ -72,13 +72,13 @@
         "business": "Perfect for small businesses just getting started",
         "prices": {
           "USD": {
-            "currencySymbol": "$",
+            "currencySymbol": "USD",
             "currencyCode": "USD",
             "amount": 100,
             "billingPeriod": "year"
           },
           "BDT": {
-            "currencySymbol": "৳",
+            "currencySymbol": "BDT",
             "currencyCode": "BDT",
             "amount": 8200,
             "billingPeriod": "year"

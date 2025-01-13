@@ -10,7 +10,18 @@ const Price = () => {
     setSelectedCurrency(currencyCode);
   };
 
-  const handleGetPayment = (e) => {
+  // const STATIC_AUTH_TOKEN = "f94737c6-7029-4dce-8aff-2d777424e1f2";
+
+  // const authenticate = (req, res, next) => {
+  //   const token = req.headers["authorization"];
+  //   if (token === STATIC_AUTH_TOKEN) {
+  //     next();
+  //   } else {
+  //     res.status(403).json({ message: "Forbidden" });
+  //   }
+  // };
+
+  const handleGetPayment = async (e) => {
     e.preventDefault();
     const form = e.target;
 
@@ -22,32 +33,32 @@ const Price = () => {
     const currencySymbol = form.dataset.currency;
     const planName = form.dataset.planname;
 
-    const postData={
+    const postData = {
       name: name,
       email: email,
       businessName: businessName,
       contactNumber: contactNumber,
       packegPrice: packegPrice,
       currencySymbol: currencySymbol,
-      planName
-    }
-    
-    console.log(postData)
+      planName,
+    };
 
-    fetch("https://combot-server-1.onrender.com/api/paymentInfo", {
+    // console.log(postData)
+
+    fetch("http://localhost:5000/api/paymentInfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // "Authorization": STATIC_AUTH_TOKEN,
       },
       body: JSON.stringify(postData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          window.location.href = "https://payment.watheta.com/";
-          form.reset('')
-        }
-      });
-
+    }).then((response) => {
+      if (response.ok) {
+        const paymentUrl = `https://unrivaled-bombolone-c1a555.netlify.app/?name=${name}&email=${email}&businessName=${businessName}&contactNumber=${contactNumber}&packageName=${planName}&amount=${packegPrice}&currency=${currencySymbol}`;
+        window.location.href = paymentUrl;
+        form.reset("");
+      }
+    });
   };
 
   return (
