@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import usePackeg from "../../Hooks/usePackeg";
 import "./Price.css";
+// import { Form } from "react-router-dom";
 
 const Price = () => {
   const [packegs] = usePackeg(); // Assuming this fetches the packages correctly
   const [selectedCurrency, setSelectedCurrency] = useState("BDT");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCurrencyChange = (currencyCode) => {
     setSelectedCurrency(currencyCode);
@@ -43,22 +45,29 @@ const Price = () => {
       planName,
     };
 
-    // console.log(postData)
-
+    // console.log(postData);
+    setIsLoading(true);
     fetch("http://localhost:5000/api/paymentInfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": STATIC_AUTH_TOKEN,
       },
       body: JSON.stringify(postData),
-    }).then((response) => {
-      if (response.ok) {
-        const paymentUrl = `https://unrivaled-bombolone-c1a555.netlify.app/?name=${name}&email=${email}&businessName=${businessName}&contactNumber=${contactNumber}&packageName=${planName}&amount=${packegPrice}&currency=${currencySymbol}`;
-        window.location.href = paymentUrl;
-        form.reset("");
-      }
-    });
+    })
+      .then((response) => {
+        if (response.ok) {
+          const paymentUrl = `https://unrivaled-bombolone-c1a555.netlify.app/?name=${name}&email=${email}&businessName=${businessName}&contactNumber=${contactNumber}&packageName=${planName}&amount=${packegPrice}&currency=${currencySymbol}`;
+          window.location.href = paymentUrl;
+          // setIsLoading(false);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        form.reset()
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -143,6 +152,16 @@ const Price = () => {
                       </ul>
                     ))}
                   </div>
+                  {/* <div>
+                    {
+                      isLoading ? (<p className="text-red-500">Loading...</p>) : ""
+                    }
+                  </div> */}
+                  {/* {isLoading && (
+                    <p className="text-red-500 font-semibold text-center">
+                      <span className="loading loading-infinity loading-lg"></span>
+                    </p>
+                  )} */}
                   <div className="card-actions justify-center mt-4">
                     {packeg.planName === "Free" ? (
                       <button
@@ -159,7 +178,7 @@ const Price = () => {
                           document.getElementById(`${packeg.id}`).showModal()
                         }
                         className="w-full bg-rose-500 rounded-xl py-2 shadow hover:shadow-2xl text-white"
-                      >
+                      > 
                         Subscribe Now
                       </button>
                     )}
@@ -223,6 +242,11 @@ const Price = () => {
                         placeholder="Business Number"
                         className="input input-bordered w-full mb-3"
                       />
+                      {isLoading && (
+                          <p className="text-red-500 font-semibold text-center">
+                            <span className="loading loading-infinity loading-lg"></span>
+                          </p>
+                        )}
                       {/* post button */}
                       <div className="flex justify-center items-center gap-5">
                         <div className="modal-action w-full">
