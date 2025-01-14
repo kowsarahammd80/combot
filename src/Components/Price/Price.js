@@ -47,7 +47,7 @@ const Price = () => {
 
     // console.log(postData);
     setIsLoading(true);
-    fetch("http://localhost:5000/api/paymentInfo", {
+    fetch("https://combot-server-1.onrender.com/api/paymentInfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
