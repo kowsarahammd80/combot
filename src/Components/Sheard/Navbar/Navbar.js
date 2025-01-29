@@ -45,17 +45,7 @@ const NavBar = () => {
             <i class="fa-solid fa-layer-group me-1 text-sm"></i>
             Features
           </Link>
-          <Link
-            onClick={showNavbar}
-            className="navLink-hover"
-            to="pricing"
-            smooth={true}
-            offset={-120}
-            duration={500}
-          >
-            <i class="fa-solid fa-wallet me-1 text-sm"></i>
-            Pricing
-          </Link>
+
           <Link
             onClick={showNavbar}
             className="navLink-hover"
@@ -67,6 +57,18 @@ const NavBar = () => {
             <i class="fa-solid fa-briefcase me-1 text-sm"></i>
             Suits
           </Link>
+          <Link
+            onClick={showNavbar}
+            className="navLink-hover"
+            to="pricing"
+            smooth={true}
+            offset={-120}
+            duration={500}
+          >
+            <i class="fa-solid fa-wallet me-1 text-sm"></i>
+            Pricing
+          </Link>
+          
           <Link
             onClick={showNavbar}
             className="navLink-hover"

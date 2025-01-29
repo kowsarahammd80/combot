@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import usePackeg from "../../Hooks/usePackeg";
 import "./Price.css";
+import { v4 as uuidv4 } from 'uuid';
 // import { Form } from "react-router-dom";
 
 const Price = () => {
@@ -23,9 +24,9 @@ const Price = () => {
   //   }
   // };
 
-  const handleGetPayment = async (e) => {
-    e.preventDefault();
-    const form = e.target;
+  const handleGetPayment = async (event) => {
+    event.preventDefault();
+    const form = event.target;
 
     const name = form.name.value;
     const email = form.email.value;
@@ -39,15 +40,24 @@ const Price = () => {
       name: name,
       email: email,
       businessName: businessName,
-      contactNumber: contactNumber,
-      packegPrice: packegPrice,
-      currencySymbol: currencySymbol,
-      planName,
+      number: contactNumber,
+      amount: packegPrice,
+      // currencySymbol: currencySymbol,
+      packageName: planName,
+      paymentStatus: "abandoned",
+      date: new Date().toLocaleDateString(),
+      paymentType:"N/A",
+      invoiceNumber: 'N/A',
+      paymentNumber: 'N/A',
+      paymentID: uuidv4(),
+      trxID: 'N/A',
+      userId: Math.random() * 10 + 1,
+      refund: ""
     };
 
-    // console.log(postData);
+    console.log(postData);
     setIsLoading(true);
-    fetch("https://combot-server-1.onrender.com/api/paymentInfo", {
+    fetch(`http://localhost:5000/api/postByDefaultAbandoned`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +66,7 @@ const Price = () => {
     })
       .then((response) => {
         if (response.ok) {
-          const paymentUrl = `https://unrivaled-bombolone-c1a555.netlify.app/?name=${name}&email=${email}&businessName=${businessName}&contactNumber=${contactNumber}&packageName=${planName}&amount=${packegPrice}&currency=${currencySymbol}`;
+          const paymentUrl = `http://localhost:3001/?name=${name}&email=${email}&businessName=${businessName}&contactNumber=${contactNumber}&packageName=${planName}&amount=${packegPrice}&currency=${currencySymbol}`;
           window.location.href = paymentUrl;
           // setIsLoading(false);
         }
@@ -244,7 +254,8 @@ const Price = () => {
                       />
                       {isLoading && (
                           <p className="text-red-500 font-semibold text-center">
-                            <span className="loading loading-infinity loading-lg"></span>
+                            {/* <span className="loading loading-infinity loading-lg"></span> */}
+                            <span className="loading loading-dots loading-lg"></span>
                           </p>
                         )}
                       {/* post button */}
